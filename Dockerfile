@@ -1,8 +1,8 @@
-FROM node:16
+FROM node:14.17-alpine
 
 WORKDIR /usr/src/my-app
 COPY ["package.json", "package-lock.json", "./"]
-RUN npm run
+RUN npm install
 COPY . .
 
 EXPOSE 3000
